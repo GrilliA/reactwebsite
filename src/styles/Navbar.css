@@ -1,0 +1,128 @@
+
+.nav-container{
+  background-color: #121619;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif
+}
+.nav-hamburguer-icon{
+  display: block;
+}
+.nav-hamburguer-icon:hover{
+  color:grey;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.nav-brand img{
+  margin:0;
+  padding: 0;
+  width: 80px;
+}
+
+.nav-links{
+  display:none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-links{
+      width:25%;
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  .nav-links > a{
+      color:white;
+      text-decoration: none;
+      font-size: 1.2em;
+  }
+  .nav-links > a:not(:last-child){
+      margin-right: 1em;
+  }
+  .nav-hamburguer-icon{
+      display:none;
+  }
+  .overlay-container-hidden{
+      display: none;
+  }
+}
+
+.overlay-container-show{
+  overflow: hidden;
+  position: fixed;
+  background-color: black;
+  opacity: 0.9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: left linear 500ms;
+}
+
+.overlay-container-hidden{
+  overflow: hidden;
+  position: fixed;
+  background-color: black;
+  opacity: 0.9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -600px;
+  width: 100%;
+  z-index: 1;
+  transition: left linear 500ms;
+}
+
+.overlay-buttonClose{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: .5em;
+  font-size: 4em;
+}
+
+.overlay-menu-wrapper{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.overlay-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 7em;
+}
+
+.overlay-menu a{
+  font-size: 2em;
+  font-weight: 100;
+  text-decoration: none;
+  color: #5c5959;
+  padding-bottom:2em ;
+  transition: 0.3s;
+
+}
+
+.overlay-menu a:hover, .overlay-menu a:focus {
+  color: #f1f1f1;
+}
+
+.overlay-menu-item:not(:last-child){
+  margin-bottom: .3em;
+}
+
+.active{
+  color: rgb(206, 66, 66) !important;
+}
